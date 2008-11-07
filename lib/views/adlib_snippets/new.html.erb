@@ -1,0 +1,15 @@
+<div id="adlib-snippet-new">
+  <% unless @adlib_snippet.errors.empty? -%>
+    <p class="error"><%= @adlib_snippet.errors.on_base %></p>
+  <% end -%>
+
+  <% form_for :adlib_snippet, :url => adlib_page_snippets_path(@adlib_page) do |f| -%>
+    <%= f.hidden_field :slot %>
+    <p class="adlib-form-textarea">
+      <%= f.text_area :content %>
+    </p>
+    <p class="adlib-form-buttons">
+      <%= submit_tag 'Save Changes' %> | <%= link_to 'Cancel', :back %>
+    </p>
+  <% end -%>
+</div>
