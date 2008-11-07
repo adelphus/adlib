@@ -1,0 +1,19 @@
+<div id="adlib-session-new">
+  <% unless @adlib_user.errors.empty? -%>
+    <p class="error"><%= @adlib_user.errors.on_base %></p>
+  <% end -%>
+
+  <% form_for :adlib_user, :url => adlib_session_path do |f| -%>
+    <p class="adlib-form-field">
+      <%= f.label :username %><br/>
+      <%= f.text_field :username %>
+    </p>
+    <p class="adlib-form-field">
+      <%= f.label :password %><br/>
+      <%= f.password_field :password %>
+    </p>
+    <p class="adlib-form-buttons">
+      <%= submit_tag 'Log in' %>
+    </p>
+  <% end -%>
+</div>
