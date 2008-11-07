@@ -29,7 +29,7 @@ Rails::Initializer.run do |config|
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
   # :all can be used as a placeholder for all plugins not explicitly named
-  config.plugins = [ :adlib, :all ]
+  config.plugins = [ :betternestedset, :adlib, :all ]
 
   # Add additional load paths for your own custom dirs
   config.load_paths += %W( #{File.dirname(__FILE__)}/../../../lib/ )
