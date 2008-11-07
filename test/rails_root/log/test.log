@@ -1,0 +1,11 @@
+# Logfile created on Fri Nov 07 11:05:15 -0500 2008WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000564)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000533)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000532)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000525)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000678)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000533)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000532)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000550)[0m   [0mROLLBACK[0m
