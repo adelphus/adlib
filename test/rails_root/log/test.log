@@ -1513,3 +1513,315 @@ Migrating to CreateAdlibPages (20080723183732)
   [4;36;1mSQL (0.000535)[0m   [0;1mROLLBACK[0m
   [4;35;1mSQL (0.000520)[0m   [0mBEGIN[0m
   [4;36;1mSQL (0.002615)[0m   [0;1mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000574)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000568)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000985)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000849)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000741)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000754)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdlibUsers (20080723183730)
+  [4;36;1mSQL (0.000738)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdlibSections (20080723183731)
+  [4;35;1mSQL (0.000944)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdlibPages (20080723183732)
+  [4;36;1mSQL (0.000747)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdlibSnippets (20080723183733)
+  [4;35;1mSQL (0.000752)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.006481)[0m   [0;1mCREATE TABLE `adlib_snippets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `page_id` int(11) DEFAULT NULL NULL, `slot` varchar(255) DEFAULT NULL NULL, `content` text DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001279)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080723183733')[0m
+  [4;36;1mAdlibPage Columns (0.002911)[0m   [0;1mSHOW FIELDS FROM `adlib_pages`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000559)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000569)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.001021)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001018)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000746)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000781)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000760)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdlibUsers (20080723183730)
+  [4;35;1mSQL (0.000778)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdlibSections (20080723183731)
+  [4;36;1mSQL (0.003023)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdlibPages (20080723183732)
+  [4;35;1mSQL (0.000827)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAdlibSnippets (20080723183733)
+  [4;36;1mSQL (0.000767)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mAdlibPage Columns (0.002812)[0m   [0mSHOW FIELDS FROM `adlib_pages`[0m
+  [4;36;1mSQL (0.000640)[0m   [0;1mBEGIN[0m
+  [4;35;1mAdlibUser Columns (0.001937)[0m   [0mSHOW FIELDS FROM `adlib_users`[0m
+  [4;36;1mSQL (0.000592)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000570)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000510)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000531)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000542)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000694)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000537)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000550)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000652)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000547)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000541)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000545)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000720)[0m   [0;1mSELECT `username` FROM `adlib_users` WHERE (`adlib_users`.username = 'johndoe') [0m
+  [4;35;1mSQL (0.000678)[0m   [0mSELECT `username` FROM `adlib_users` WHERE (`adlib_users`.username = 'johndoe') [0m
+  [4;36;1mSQL (0.000594)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000557)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000696)[0m   [0;1mSELECT `username` FROM `adlib_users` WHERE (`adlib_users`.username = 'johndoe') [0m
+  [4;35;1mAdlibUser Create (0.000718)[0m   [0mINSERT INTO `adlib_users` (`updated_at`, `username`, `password_salt`, `password_hash`, `created_at`) VALUES('2008-11-07 16:56:28', 'johndoe', '7bfccb8bfe8b4e8538c4429c854690be54968925', 'f6ab2733b0257764328b3af29fc5820d87fc1df0', '2008-11-07 16:56:28')[0m
+  [4;36;1mSQL (0.000896)[0m   [0;1mSELECT `username` FROM `adlib_users` WHERE (`adlib_users`.username = 'johndoe') [0m
+  [4;35;1mSQL (0.000781)[0m   [0mSELECT `username` FROM `adlib_users` WHERE (`adlib_users`.username = 'johndoe') [0m
+  [4;36;1mSQL (0.004722)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000550)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000891)[0m   [0;1mSELECT `username` FROM `adlib_users` WHERE (`adlib_users`.username = '0Dollar$') [0m
+  [4;35;1mSQL (0.000693)[0m   [0mSELECT `username` FROM `adlib_users` WHERE (`adlib_users`.username = '0Dollar$') [0m
+  [4;36;1mSQL (0.000903)[0m   [0;1mSELECT `username` FROM `adlib_users` WHERE (`adlib_users`.username = '*') [0m
+  [4;35;1mSQL (0.000695)[0m   [0mSELECT `username` FROM `adlib_users` WHERE (`adlib_users`.username = '*') [0m
+  [4;36;1mSQL (0.000809)[0m   [0;1mSELECT `username` FROM `adlib_users` WHERE (`adlib_users`.username = 'no-dashes') [0m
+  [4;35;1mSQL (0.000735)[0m   [0mSELECT `username` FROM `adlib_users` WHERE (`adlib_users`.username = 'no-dashes') [0m
+  [4;36;1mSQL (0.000786)[0m   [0;1mSELECT `username` FROM `adlib_users` WHERE (`adlib_users`.username = 'no.dots') [0m
+  [4;35;1mSQL (0.000687)[0m   [0mSELECT `username` FROM `adlib_users` WHERE (`adlib_users`.username = 'no.dots') [0m
+  [4;36;1mSQL (0.000813)[0m   [0;1mSELECT `username` FROM `adlib_users` WHERE (`adlib_users`.username = 'no spaces') [0m
+  [4;35;1mSQL (0.000568)[0m   [0mSELECT `username` FROM `adlib_users` WHERE (`adlib_users`.username = 'no spaces') [0m
+  [4;36;1mSQL (0.000560)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000571)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000920)[0m   [0;1mSELECT `username` FROM `adlib_users` WHERE (`adlib_users`.username = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx') [0m
+  [4;35;1mSQL (0.000696)[0m   [0mSELECT `username` FROM `adlib_users` WHERE (`adlib_users`.username = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx') [0m
+  [4;36;1mSQL (0.000553)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000662)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.001116)[0m   [0;1mSELECT `username` FROM `adlib_users` WHERE (`adlib_users`.username = '') [0m
+  [4;35;1mSQL (0.000724)[0m   [0mSELECT `username` FROM `adlib_users` WHERE (`adlib_users`.username = '') [0m
+  [4;36;1mSQL (0.000584)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000521)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000872)[0m   [0;1mSELECT `username` FROM `adlib_users` WHERE (`adlib_users`.username = 'johndoe') [0m
+  [4;35;1mSQL (0.000554)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000624)[0m   [0;1mBEGIN[0m
+  [4;35;1mAdlibSection Columns (0.002546)[0m   [0mSHOW FIELDS FROM `adlib_sections`[0m
+  [4;36;1mSQL (0.000751)[0m   [0;1mSELECT `name` FROM `adlib_sections` WHERE (`adlib_sections`.name = 'main_menu') [0m
+  [4;35;1mAdlibSection Create (0.000697)[0m   [0mINSERT INTO `adlib_sections` (`name`, `updated_at`, `created_at`) VALUES('main_menu', '2008-11-07 16:56:28', '2008-11-07 16:56:28')[0m
+  [4;36;1mSQL (0.000806)[0m   [0;1mSELECT `name` FROM `adlib_sections` WHERE (`adlib_sections`.name = 'main_menu') [0m
+  [4;35;1mSQL (0.000828)[0m   [0mSELECT `name` FROM `adlib_sections` WHERE (`adlib_sections`.name = 'main_menu') [0m
+  [4;36;1mSQL (0.001019)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000571)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000838)[0m   [0;1mSELECT `name` FROM `adlib_sections` WHERE (`adlib_sections`.name = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx') [0m
+  [4;35;1mSQL (0.000728)[0m   [0mSELECT `name` FROM `adlib_sections` WHERE (`adlib_sections`.name = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx') [0m
+  [4;36;1mSQL (0.000574)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000532)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000837)[0m   [0;1mSELECT `name` FROM `adlib_sections` WHERE (`adlib_sections`.name = '0Dollar$') [0m
+  [4;35;1mSQL (0.000697)[0m   [0mSELECT `name` FROM `adlib_sections` WHERE (`adlib_sections`.name = '0Dollar$') [0m
+  [4;36;1mSQL (0.000780)[0m   [0;1mSELECT `name` FROM `adlib_sections` WHERE (`adlib_sections`.name = '*') [0m
+  [4;35;1mSQL (0.000679)[0m   [0mSELECT `name` FROM `adlib_sections` WHERE (`adlib_sections`.name = '*') [0m
+  [4;36;1mSQL (0.000792)[0m   [0;1mSELECT `name` FROM `adlib_sections` WHERE (`adlib_sections`.name = 'no-dashes') [0m
+  [4;35;1mSQL (0.000704)[0m   [0mSELECT `name` FROM `adlib_sections` WHERE (`adlib_sections`.name = 'no-dashes') [0m
+  [4;36;1mSQL (0.000833)[0m   [0;1mSELECT `name` FROM `adlib_sections` WHERE (`adlib_sections`.name = 'no.dots') [0m
+  [4;35;1mSQL (0.001637)[0m   [0mSELECT `name` FROM `adlib_sections` WHERE (`adlib_sections`.name = 'no.dots') [0m
+  [4;36;1mSQL (0.000839)[0m   [0;1mSELECT `name` FROM `adlib_sections` WHERE (`adlib_sections`.name = 'no spaces') [0m
+  [4;35;1mSQL (0.000776)[0m   [0mSELECT `name` FROM `adlib_sections` WHERE (`adlib_sections`.name = 'no spaces') [0m
+  [4;36;1mSQL (0.000662)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000568)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000834)[0m   [0;1mSELECT `name` FROM `adlib_sections` WHERE (`adlib_sections`.name = '') [0m
+  [4;35;1mSQL (0.000697)[0m   [0mSELECT `name` FROM `adlib_sections` WHERE (`adlib_sections`.name = '') [0m
+  [4;36;1mSQL (0.000552)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000587)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000551)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000543)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000934)[0m   [0;1mSELECT `name` FROM `adlib_sections` WHERE (`adlib_sections`.name = 'main_menu') [0m
+  [4;35;1mSQL (0.000557)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000572)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000868)[0m   [0mSELECT max(`adlib_pages`.rgt) AS max_rgt FROM `adlib_pages` WHERE (1 = 1) [0m
+  [4;36;1mAdlibPage Create (0.000675)[0m   [0;1mINSERT INTO `adlib_pages` (`name`, `slug`, `updated_at`, `title`, `section_id`, `url`, `lft`, `shortcut_id`, `parent_id`, `rgt`, `layout`, `created_at`) VALUES('Root', '/', '2008-11-07 16:56:28', NULL, NULL, NULL, 1, NULL, NULL, 2, 'default', '2008-11-07 16:56:28')[0m
+  [4;35;1mSQL (0.000849)[0m   [0mSELECT max(`adlib_pages`.rgt) AS max_rgt FROM `adlib_pages` WHERE (1 = 1) [0m
+  [4;36;1mAdlibPage Create (0.000619)[0m   [0;1mINSERT INTO `adlib_pages` (`name`, `slug`, `updated_at`, `title`, `section_id`, `url`, `lft`, `shortcut_id`, `parent_id`, `rgt`, `layout`, `created_at`) VALUES('Foo', 'foo/', '2008-11-07 16:56:28', NULL, NULL, NULL, 3, NULL, NULL, 4, 'default', '2008-11-07 16:56:28')[0m
+  [4;35;1mAdlibPage Load (0.002038)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 92) [0m
+  [4;36;1mAdlibPage Load (0.001541)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 91) [0m
+  [4;35;1mAdlibPage Update (0.000760)[0m   [0mUPDATE `adlib_pages` SET lft = CASE WHEN lft BETWEEN 2 AND 2 THEN lft + 2 WHEN lft BETWEEN 3 AND 4 THEN lft + -1 ELSE lft END, rgt = CASE WHEN rgt BETWEEN 2 AND 2 THEN rgt + 2 WHEN rgt BETWEEN 3 AND 4 THEN rgt + -1 ELSE rgt END, parent_id = CASE WHEN id = 92 THEN 91 ELSE parent_id END WHERE (1 = 1) [0m
+  [4;36;1mAdlibPage Load (0.001848)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 92) [0m
+  [4;35;1mAdlibPage Load (0.001811)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 91) [0m
+  [4;36;1mSQL (0.003378)[0m   [0;1mSELECT max(`adlib_pages`.rgt) AS max_rgt FROM `adlib_pages` WHERE (1 = 1) [0m
+  [4;35;1mAdlibPage Create (0.000669)[0m   [0mINSERT INTO `adlib_pages` (`name`, `slug`, `updated_at`, `title`, `section_id`, `url`, `lft`, `shortcut_id`, `parent_id`, `rgt`, `layout`, `created_at`) VALUES('Bar', 'bar/', '2008-11-07 16:56:28', NULL, NULL, NULL, 5, NULL, NULL, 6, 'default', '2008-11-07 16:56:28')[0m
+  [4;36;1mAdlibPage Load (0.001943)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 93) [0m
+  [4;35;1mAdlibPage Load (0.002154)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 92) [0m
+  [4;36;1mAdlibPage Update (0.000775)[0m   [0;1mUPDATE `adlib_pages` SET lft = CASE WHEN lft BETWEEN 3 AND 4 THEN lft + 2 WHEN lft BETWEEN 5 AND 6 THEN lft + -2 ELSE lft END, rgt = CASE WHEN rgt BETWEEN 3 AND 4 THEN rgt + 2 WHEN rgt BETWEEN 5 AND 6 THEN rgt + -2 ELSE rgt END, parent_id = CASE WHEN id = 93 THEN 92 ELSE parent_id END WHERE (1 = 1) [0m
+  [4;35;1mAdlibPage Load (0.001831)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 93) [0m
+  [4;36;1mAdlibPage Load (0.001658)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 92) [0m
+  [4;35;1mSQL (0.000800)[0m   [0mSELECT max(`adlib_pages`.rgt) AS max_rgt FROM `adlib_pages` WHERE (1 = 1) [0m
+  [4;36;1mAdlibPage Create (0.000611)[0m   [0;1mINSERT INTO `adlib_pages` (`name`, `slug`, `updated_at`, `title`, `section_id`, `url`, `lft`, `shortcut_id`, `parent_id`, `rgt`, `layout`, `created_at`) VALUES('Baz', 'baz/', '2008-11-07 16:56:28', NULL, NULL, NULL, 7, NULL, NULL, 8, 'default', '2008-11-07 16:56:28')[0m
+  [4;35;1mAdlibPage Load (0.001760)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 94) [0m
+  [4;36;1mAdlibPage Load (0.001776)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 93) [0m
+  [4;35;1mAdlibPage Update (0.000734)[0m   [0mUPDATE `adlib_pages` SET lft = CASE WHEN lft BETWEEN 4 AND 6 THEN lft + 2 WHEN lft BETWEEN 7 AND 8 THEN lft + -3 ELSE lft END, rgt = CASE WHEN rgt BETWEEN 4 AND 6 THEN rgt + 2 WHEN rgt BETWEEN 7 AND 8 THEN rgt + -3 ELSE rgt END, parent_id = CASE WHEN id = 94 THEN 93 ELSE parent_id END WHERE (1 = 1) [0m
+  [4;36;1mAdlibPage Load (0.001174)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 94) [0m
+  [4;35;1mAdlibPage Load (0.001730)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 93) [0m
+  [4;36;1mAdlibPage Load (0.001796)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (1 = 1 AND parent_id = 93) ORDER BY lft[0m
+  [4;35;1mAdlibPage Load (0.001743)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 93) [0m
+  [4;36;1mAdlibPage Load (0.001818)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 93) [0m
+  [4;35;1mAdlibPage Update (0.000696)[0m   [0mUPDATE adlib_pages SET `layout` = 'default', `created_at` = '2008-11-07 16:56:28', `shortcut_id` = NULL, `title` = NULL, `slug` = 'baz/', `section_id` = NULL, `parent_id` = 93, `updated_at` = '2008-11-07 16:56:28', `url` = NULL, `name` = 'Baz' WHERE id = 94[0m
+  [4;36;1mAdlibPage Load (0.002064)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (1 = 1 AND (4 BETWEEN lft AND rgt)) ORDER BY lft[0m
+  [4;35;1mSQL (0.001198)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000509)[0m   [0;1mBEGIN[0m
+  [4;35;1mAdlibPage Load (0.001665)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`slug` = '/') LIMIT 1[0m
+  [4;36;1mSQL (0.000546)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000535)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000819)[0m   [0;1mSELECT max(`adlib_pages`.rgt) AS max_rgt FROM `adlib_pages` WHERE (1 = 1) [0m
+  [4;35;1mAdlibPage Create (0.000626)[0m   [0mINSERT INTO `adlib_pages` (`name`, `slug`, `updated_at`, `title`, `section_id`, `url`, `lft`, `shortcut_id`, `parent_id`, `rgt`, `layout`, `created_at`) VALUES('Root', '/', '2008-11-07 16:56:28', NULL, NULL, NULL, 1, NULL, NULL, 2, 'default', '2008-11-07 16:56:28')[0m
+  [4;36;1mSQL (0.000818)[0m   [0;1mSELECT max(`adlib_pages`.rgt) AS max_rgt FROM `adlib_pages` WHERE (1 = 1) [0m
+  [4;35;1mAdlibPage Create (0.000627)[0m   [0mINSERT INTO `adlib_pages` (`name`, `slug`, `updated_at`, `title`, `section_id`, `url`, `lft`, `shortcut_id`, `parent_id`, `rgt`, `layout`, `created_at`) VALUES('Foo', 'foo/', '2008-11-07 16:56:28', NULL, NULL, NULL, 3, NULL, NULL, 4, 'default', '2008-11-07 16:56:28')[0m
+  [4;36;1mAdlibPage Load (0.001735)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 96) [0m
+  [4;35;1mAdlibPage Load (0.001751)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 95) [0m
+  [4;36;1mAdlibPage Update (0.000687)[0m   [0;1mUPDATE `adlib_pages` SET lft = CASE WHEN lft BETWEEN 2 AND 2 THEN lft + 2 WHEN lft BETWEEN 3 AND 4 THEN lft + -1 ELSE lft END, rgt = CASE WHEN rgt BETWEEN 2 AND 2 THEN rgt + 2 WHEN rgt BETWEEN 3 AND 4 THEN rgt + -1 ELSE rgt END, parent_id = CASE WHEN id = 96 THEN 95 ELSE parent_id END WHERE (1 = 1) [0m
+  [4;35;1mAdlibPage Load (0.001400)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 96) [0m
+  [4;36;1mAdlibPage Load (0.001956)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 95) [0m
+  [4;35;1mSQL (0.000980)[0m   [0mSELECT max(`adlib_pages`.rgt) AS max_rgt FROM `adlib_pages` WHERE (1 = 1) [0m
+  [4;36;1mAdlibPage Create (0.000673)[0m   [0;1mINSERT INTO `adlib_pages` (`name`, `slug`, `updated_at`, `title`, `section_id`, `url`, `lft`, `shortcut_id`, `parent_id`, `rgt`, `layout`, `created_at`) VALUES('Bar', 'bar/', '2008-11-07 16:56:28', NULL, NULL, NULL, 5, NULL, NULL, 6, 'default', '2008-11-07 16:56:28')[0m
+  [4;35;1mAdlibPage Load (0.001752)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 97) [0m
+  [4;36;1mAdlibPage Load (0.001805)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 96) [0m
+  [4;35;1mAdlibPage Update (0.000814)[0m   [0mUPDATE `adlib_pages` SET lft = CASE WHEN lft BETWEEN 3 AND 4 THEN lft + 2 WHEN lft BETWEEN 5 AND 6 THEN lft + -2 ELSE lft END, rgt = CASE WHEN rgt BETWEEN 3 AND 4 THEN rgt + 2 WHEN rgt BETWEEN 5 AND 6 THEN rgt + -2 ELSE rgt END, parent_id = CASE WHEN id = 97 THEN 96 ELSE parent_id END WHERE (1 = 1) [0m
+  [4;36;1mAdlibPage Load (0.001306)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 97) [0m
+  [4;35;1mAdlibPage Load (0.001716)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 96) [0m
+  [4;36;1mSQL (0.000818)[0m   [0;1mSELECT max(`adlib_pages`.rgt) AS max_rgt FROM `adlib_pages` WHERE (1 = 1) [0m
+  [4;35;1mAdlibPage Create (0.000700)[0m   [0mINSERT INTO `adlib_pages` (`name`, `slug`, `updated_at`, `title`, `section_id`, `url`, `lft`, `shortcut_id`, `parent_id`, `rgt`, `layout`, `created_at`) VALUES('Baz', 'baz/', '2008-11-07 16:56:28', NULL, NULL, NULL, 7, NULL, NULL, 8, 'default', '2008-11-07 16:56:28')[0m
+  [4;36;1mAdlibPage Load (0.001757)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 98) [0m
+  [4;35;1mAdlibPage Load (0.001721)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 97) [0m
+  [4;36;1mAdlibPage Update (0.000796)[0m   [0;1mUPDATE `adlib_pages` SET lft = CASE WHEN lft BETWEEN 4 AND 6 THEN lft + 2 WHEN lft BETWEEN 7 AND 8 THEN lft + -3 ELSE lft END, rgt = CASE WHEN rgt BETWEEN 4 AND 6 THEN rgt + 2 WHEN rgt BETWEEN 7 AND 8 THEN rgt + -3 ELSE rgt END, parent_id = CASE WHEN id = 98 THEN 97 ELSE parent_id END WHERE (1 = 1) [0m
+  [4;35;1mAdlibPage Load (0.001743)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 98) [0m
+  [4;36;1mAdlibPage Load (0.001761)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 97) [0m
+  [4;35;1mAdlibPage Load (0.001706)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`slug` = '/') LIMIT 1[0m
+  [4;36;1mAdlibPage Load (0.001807)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`slug` = 'foo/' AND `adlib_pages`.`parent_id` = 95) LIMIT 1[0m
+  [4;35;1mAdlibPage Load (0.001762)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`slug` = 'bar/' AND `adlib_pages`.`parent_id` = 96) LIMIT 1[0m
+  [4;36;1mAdlibPage Load (0.001774)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`slug` = 'baz/' AND `adlib_pages`.`parent_id` = 97) LIMIT 1[0m
+  [4;35;1mSQL (0.001611)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000506)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000527)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000500)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000570)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000546)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000874)[0m   [0mSELECT max(`adlib_pages`.rgt) AS max_rgt FROM `adlib_pages` WHERE (1 = 1) [0m
+  [4;36;1mAdlibPage Create (0.000629)[0m   [0;1mINSERT INTO `adlib_pages` (`name`, `slug`, `updated_at`, `title`, `section_id`, `url`, `lft`, `shortcut_id`, `parent_id`, `rgt`, `layout`, `created_at`) VALUES('The Page Name', NULL, '2008-11-07 16:56:28', NULL, NULL, 'http://www.google.com/', 1, NULL, NULL, 2, NULL, '2008-11-07 16:56:28')[0m
+  [4;35;1mSQL (0.000787)[0m   [0mSELECT max(`adlib_pages`.rgt) AS max_rgt FROM `adlib_pages` WHERE (1 = 1) [0m
+  [4;36;1mAdlibPage Create (0.001560)[0m   [0;1mINSERT INTO `adlib_pages` (`name`, `slug`, `updated_at`, `title`, `section_id`, `url`, `lft`, `shortcut_id`, `parent_id`, `rgt`, `layout`, `created_at`) VALUES('The Page Name', 'bar/', '2008-11-07 16:56:28', NULL, NULL, NULL, 3, NULL, NULL, 4, 'default', '2008-11-07 16:56:28')[0m
+  [4;35;1mAdlibPage Load (0.001656)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 100) [0m
+  [4;36;1mAdlibPage Load (0.001767)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 99) [0m
+  [4;35;1mAdlibPage Update (0.000710)[0m   [0mUPDATE `adlib_pages` SET lft = CASE WHEN lft BETWEEN 2 AND 2 THEN lft + 2 WHEN lft BETWEEN 3 AND 4 THEN lft + -1 ELSE lft END, rgt = CASE WHEN rgt BETWEEN 2 AND 2 THEN rgt + 2 WHEN rgt BETWEEN 3 AND 4 THEN rgt + -1 ELSE rgt END, parent_id = CASE WHEN id = 100 THEN 99 ELSE parent_id END WHERE (1 = 1) [0m
+  [4;36;1mAdlibPage Load (0.001753)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 100) [0m
+  [4;35;1mAdlibPage Load (0.001777)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 99) [0m
+  [4;36;1mAdlibPage Load (0.001767)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (1 = 1 AND parent_id = 99) ORDER BY lft[0m
+  [4;35;1mAdlibPage Load (0.001583)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 99) [0m
+  [4;36;1mAdlibPage Load (0.001740)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 99) [0m
+  [4;35;1mSQL (0.001096)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000529)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000844)[0m   [0mSELECT max(`adlib_pages`.rgt) AS max_rgt FROM `adlib_pages` WHERE (1 = 1) [0m
+  [4;36;1mAdlibPage Create (0.000638)[0m   [0;1mINSERT INTO `adlib_pages` (`name`, `slug`, `updated_at`, `title`, `section_id`, `url`, `lft`, `shortcut_id`, `parent_id`, `rgt`, `layout`, `created_at`) VALUES('The Page Name', 'bar/', '2008-11-07 16:56:28', NULL, NULL, NULL, 1, NULL, NULL, 2, 'default', '2008-11-07 16:56:28')[0m
+  [4;35;1mSQL (0.000782)[0m   [0mSELECT max(`adlib_pages`.rgt) AS max_rgt FROM `adlib_pages` WHERE (1 = 1) [0m
+  [4;36;1mAdlibPage Create (0.000633)[0m   [0;1mINSERT INTO `adlib_pages` (`name`, `slug`, `updated_at`, `title`, `section_id`, `url`, `lft`, `shortcut_id`, `parent_id`, `rgt`, `layout`, `created_at`) VALUES('The Page Name', 'bar/', '2008-11-07 16:56:28', NULL, NULL, NULL, 3, NULL, NULL, 4, 'default', '2008-11-07 16:56:28')[0m
+  [4;35;1mAdlibPage Load (0.001827)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 102) [0m
+  [4;36;1mAdlibPage Load (0.001853)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 101) [0m
+  [4;35;1mAdlibPage Update (0.000719)[0m   [0mUPDATE `adlib_pages` SET lft = CASE WHEN lft BETWEEN 2 AND 2 THEN lft + 2 WHEN lft BETWEEN 3 AND 4 THEN lft + -1 ELSE lft END, rgt = CASE WHEN rgt BETWEEN 2 AND 2 THEN rgt + 2 WHEN rgt BETWEEN 3 AND 4 THEN rgt + -1 ELSE rgt END, parent_id = CASE WHEN id = 102 THEN 101 ELSE parent_id END WHERE (1 = 1) [0m
+  [4;36;1mAdlibPage Load (0.001411)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 102) [0m
+  [4;35;1mAdlibPage Load (0.001739)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 101) [0m
+  [4;36;1mAdlibPage Load (0.001586)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 102) [0m
+  [4;35;1mAdlibPage Load (0.001710)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 101) [0m
+  [4;36;1mAdlibPage Load (0.001808)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (1 = 1 AND parent_id = 101) ORDER BY lft[0m
+  [4;35;1mAdlibPage Load (0.001723)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 101) [0m
+  [4;36;1mAdlibPage Load (0.001811)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 101) [0m
+  [4;35;1mSQL (0.001471)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000536)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000821)[0m   [0mSELECT max(`adlib_pages`.rgt) AS max_rgt FROM `adlib_pages` WHERE (1 = 1) [0m
+  [4;36;1mAdlibPage Create (0.000685)[0m   [0;1mINSERT INTO `adlib_pages` (`name`, `slug`, `updated_at`, `title`, `section_id`, `url`, `lft`, `shortcut_id`, `parent_id`, `rgt`, `layout`, `created_at`) VALUES('The Page Name', 'bar/', '2008-11-07 16:56:28', NULL, NULL, NULL, 1, NULL, NULL, 2, 'default', '2008-11-07 16:56:28')[0m
+  [4;35;1mSQL (0.000879)[0m   [0mSELECT max(`adlib_pages`.rgt) AS max_rgt FROM `adlib_pages` WHERE (1 = 1) [0m
+  [4;36;1mAdlibPage Create (0.000683)[0m   [0;1mINSERT INTO `adlib_pages` (`name`, `slug`, `updated_at`, `title`, `section_id`, `url`, `lft`, `shortcut_id`, `parent_id`, `rgt`, `layout`, `created_at`) VALUES('The Page Name', 'bar/', '2008-11-07 16:56:28', NULL, NULL, NULL, 3, NULL, NULL, 4, 'default', '2008-11-07 16:56:28')[0m
+  [4;35;1mAdlibPage Load (0.001820)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 104) [0m
+  [4;36;1mAdlibPage Load (0.001657)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 103) [0m
+  [4;35;1mAdlibPage Update (0.000832)[0m   [0mUPDATE `adlib_pages` SET lft = CASE WHEN lft BETWEEN 2 AND 2 THEN lft + 2 WHEN lft BETWEEN 3 AND 4 THEN lft + -1 ELSE lft END, rgt = CASE WHEN rgt BETWEEN 2 AND 2 THEN rgt + 2 WHEN rgt BETWEEN 3 AND 4 THEN rgt + -1 ELSE rgt END, parent_id = CASE WHEN id = 104 THEN 103 ELSE parent_id END WHERE (1 = 1) [0m
+  [4;36;1mAdlibPage Load (0.001912)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 104) [0m
+  [4;35;1mAdlibPage Load (0.001739)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 103) [0m
+  [4;36;1mSQL (0.000792)[0m   [0;1mSELECT max(`adlib_pages`.rgt) AS max_rgt FROM `adlib_pages` WHERE (1 = 1) [0m
+  [4;35;1mAdlibPage Create (0.000588)[0m   [0mINSERT INTO `adlib_pages` (`name`, `slug`, `updated_at`, `title`, `section_id`, `url`, `lft`, `shortcut_id`, `parent_id`, `rgt`, `layout`, `created_at`) VALUES('The Page Name', 'bar/', '2008-11-07 16:56:28', NULL, NULL, NULL, 5, NULL, NULL, 6, 'default', '2008-11-07 16:56:28')[0m
+  [4;36;1mAdlibPage Load (0.001532)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 105) [0m
+  [4;35;1mAdlibPage Load (0.001759)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 103) [0m
+  [4;36;1mAdlibPage Update (0.000662)[0m   [0;1mUPDATE `adlib_pages` SET lft = CASE WHEN lft BETWEEN 4 AND 4 THEN lft + 2 WHEN lft BETWEEN 5 AND 6 THEN lft + -1 ELSE lft END, rgt = CASE WHEN rgt BETWEEN 4 AND 4 THEN rgt + 2 WHEN rgt BETWEEN 5 AND 6 THEN rgt + -1 ELSE rgt END, parent_id = CASE WHEN id = 105 THEN 103 ELSE parent_id END WHERE (1 = 1) [0m
+  [4;35;1mAdlibPage Load (0.001715)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 105) [0m
+  [4;36;1mAdlibPage Load (0.001714)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 103) [0m
+  [4;35;1mAdlibPage Load (0.001986)[0m   [0mSELECT * FROM `adlib_pages` WHERE (1 = 1 AND parent_id = 103) ORDER BY lft[0m
+  [4;36;1mAdlibPage Load (0.001762)[0m   [0;1mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 103) [0m
+  [4;35;1mAdlibPage Load (0.001639)[0m   [0mSELECT * FROM `adlib_pages` WHERE (`adlib_pages`.`id` = 103) [0m
+  [4;36;1mSQL (0.001178)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000600)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000520)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000522)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000529)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000518)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000532)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000532)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000537)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000553)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000543)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000509)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000551)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000522)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000519)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000503)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000542)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000549)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000659)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000551)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000558)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000737)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000510)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000548)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000537)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000509)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000572)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000540)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000518)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000509)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000547)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000604)[0m   [0mBEGIN[0m
+  [4;36;1mAdlibSnippet Columns (0.002149)[0m   [0;1mSHOW FIELDS FROM `adlib_snippets`[0m
+  [4;35;1mSQL (0.001014)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001018)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000758)[0m   [0mSELECT `slot` FROM `adlib_snippets` WHERE (`adlib_snippets`.slot = 'main' AND `adlib_snippets`.page_id = 10002) [0m
+  [4;36;1mAdlibSnippet Create (0.000639)[0m   [0;1mINSERT INTO `adlib_snippets` (`updated_at`, `page_id`, `content`, `slot`, `created_at`) VALUES('2008-11-07 16:56:28', 10002, NULL, 'main', '2008-11-07 16:56:28')[0m
+  [4;35;1mSQL (0.000809)[0m   [0mSELECT `slot` FROM `adlib_snippets` WHERE (`adlib_snippets`.slot = 'main' AND `adlib_snippets`.page_id = 10001) [0m
+  [4;36;1mSQL (0.001092)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000534)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000978)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000897)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000797)[0m   [0;1mSELECT `slot` FROM `adlib_snippets` WHERE (`adlib_snippets`.slot = 'main' AND `adlib_snippets`.page_id = 10004) [0m
+  [4;35;1mAdlibSnippet Create (0.000640)[0m   [0mINSERT INTO `adlib_snippets` (`updated_at`, `page_id`, `content`, `slot`, `created_at`) VALUES('2008-11-07 16:56:28', 10004, NULL, 'main', '2008-11-07 16:56:28')[0m
+  [4;36;1mSQL (0.000926)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000801)[0m   [0mSELECT `slot` FROM `adlib_snippets` WHERE (`adlib_snippets`.slot = 'main' AND `adlib_snippets`.page_id = 10004) [0m
+  [4;36;1mSQL (0.000807)[0m   [0;1mSELECT `slot` FROM `adlib_snippets` WHERE (`adlib_snippets`.slot = 'main' AND `adlib_snippets`.page_id = 10004) [0m
+  [4;35;1mSQL (0.000982)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000558)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.001002)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000836)[0m   [0;1mSELECT `slot` FROM `adlib_snippets` WHERE (`adlib_snippets`.slot = '0Dollar$' AND `adlib_snippets`.page_id = 10005) [0m
+  [4;35;1mSQL (0.000714)[0m   [0mSELECT `slot` FROM `adlib_snippets` WHERE (`adlib_snippets`.slot = '0Dollar$' AND `adlib_snippets`.page_id = 10005) [0m
+  [4;36;1mSQL (0.000865)[0m   [0;1mSELECT `slot` FROM `adlib_snippets` WHERE (`adlib_snippets`.slot = '*' AND `adlib_snippets`.page_id = 10005) [0m
+  [4;35;1mSQL (0.000659)[0m   [0mSELECT `slot` FROM `adlib_snippets` WHERE (`adlib_snippets`.slot = '*' AND `adlib_snippets`.page_id = 10005) [0m
+  [4;36;1mSQL (0.000772)[0m   [0;1mSELECT `slot` FROM `adlib_snippets` WHERE (`adlib_snippets`.slot = 'no-dashes' AND `adlib_snippets`.page_id = 10005) [0m
+  [4;35;1mSQL (0.000663)[0m   [0mSELECT `slot` FROM `adlib_snippets` WHERE (`adlib_snippets`.slot = 'no-dashes' AND `adlib_snippets`.page_id = 10005) [0m
+  [4;36;1mSQL (0.000771)[0m   [0;1mSELECT `slot` FROM `adlib_snippets` WHERE (`adlib_snippets`.slot = 'no.dots' AND `adlib_snippets`.page_id = 10005) [0m
+  [4;35;1mSQL (0.000641)[0m   [0mSELECT `slot` FROM `adlib_snippets` WHERE (`adlib_snippets`.slot = 'no.dots' AND `adlib_snippets`.page_id = 10005) [0m
+  [4;36;1mSQL (0.000775)[0m   [0;1mSELECT `slot` FROM `adlib_snippets` WHERE (`adlib_snippets`.slot = 'no spaces' AND `adlib_snippets`.page_id = 10005) [0m
+  [4;35;1mSQL (0.000686)[0m   [0mSELECT `slot` FROM `adlib_snippets` WHERE (`adlib_snippets`.slot = 'no spaces' AND `adlib_snippets`.page_id = 10005) [0m
+  [4;36;1mSQL (0.000548)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000508)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.001124)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000863)[0m   [0mSELECT `slot` FROM `adlib_snippets` WHERE (`adlib_snippets`.slot = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' AND `adlib_snippets`.page_id = 10006) [0m
+  [4;36;1mSQL (0.000675)[0m   [0;1mSELECT `slot` FROM `adlib_snippets` WHERE (`adlib_snippets`.slot = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' AND `adlib_snippets`.page_id = 10006) [0m
+  [4;35;1mSQL (0.000540)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000548)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000982)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000788)[0m   [0;1mSELECT `slot` FROM `adlib_snippets` WHERE (`adlib_snippets`.slot = '' AND `adlib_snippets`.page_id = 10007) [0m
+  [4;35;1mSQL (0.000706)[0m   [0mSELECT `slot` FROM `adlib_snippets` WHERE (`adlib_snippets`.slot = '' AND `adlib_snippets`.page_id = 10007) [0m
+  [4;36;1mSQL (0.000544)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000612)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000982)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000836)[0m   [0mSELECT `slot` FROM `adlib_snippets` WHERE (`adlib_snippets`.slot = 'main' AND `adlib_snippets`.page_id IS NULL) [0m
+  [4;36;1mSQL (0.000666)[0m   [0;1mSELECT `slot` FROM `adlib_snippets` WHERE (`adlib_snippets`.slot = 'main' AND `adlib_snippets`.page_id IS NULL) [0m
+  [4;35;1mSQL (0.000539)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000513)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.001024)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001456)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000566)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.001047)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000909)[0m   [0mSELECT `slot` FROM `adlib_snippets` WHERE (`adlib_snippets`.slot = 'main' AND `adlib_snippets`.page_id = 10010) [0m
+  [4;36;1mSQL (0.000568)[0m   [0;1mROLLBACK[0m
