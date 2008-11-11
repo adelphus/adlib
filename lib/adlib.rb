@@ -11,3 +11,6 @@ require 'models/adlib_section'
 require 'models/adlib_page'
 require 'models/adlib_snippet'
 require 'models/adlib_image'
+
+require 'helpers/adlib_helper'
+include AdlibHelper
