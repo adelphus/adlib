@@ -1,0 +1,59 @@
+div#adlib-page-toolbar {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+}
+div#adlib-page-toolbar a#adlib_link_to_page_edit {
+  background: #666666;
+  border: 4px solid #999999;
+  color: #CCCCCC;  
+  display: block;
+  font: bold 12pt sans-serif;
+  margin: 8px;
+  padding: 8px;
+  position: absolute;
+  text-decoration: none;
+}
+div#adlib-page-toolbar a:hover#adlib_link_to_page_edit {
+  border: 4px solid #CCCCCC;
+  color: white;  
+}
+
+div.adlib-richtext {
+  background: #CCCCCC;
+  border: 4px dashed #666666;
+  cursor: pointer;
+  margin: -12px;
+  padding: 8px;
+}
+
+div:hover.adlib-richtext,
+div.iehover {
+  background: #999999;
+}
+div.adlib-richtext a.adlib-richtext-edit {
+  background: #666666;
+  border: 4px solid #CCCCCC;
+  color: white;  
+  display: none;
+  font: bold 12pt sans-serif;
+  padding: 8px;
+  position: absolute;
+  text-decoration: none;
+}
+div:hover.adlib-richtext a.adlib-richtext-edit,
+div.iehover a.adlib-richtext-edit {
+  display: block;  
+}
+p.adlib-form-textarea textarea {
+  width: 630px;
+  height: 330px;
+}
+div.rte-toolbar {
+  margin-top: -1em;
+}
+iframe {
+  border: 2px solid #CCCCCC;
+  padding: 4px;
+}
