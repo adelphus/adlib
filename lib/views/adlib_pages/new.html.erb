@@ -1,0 +1,25 @@
+<div id="adlib-page-new" title="Add a New Page" width="400" height="380">
+  <% unless @adlib_page.errors.empty? -%>
+    <p class="error"><%= @adlib_page.errors.on_base %></p>
+  <% end -%>
+
+  <% form_for :adlib_page, :url => adlib_page_path(@adlib_page) do |f| -%>
+    <input type="hidden" name="parent_id" value="<%= params[:parent_id] %>" />
+    <input type="hidden" name="layouts" value="<%= params[:layouts] %>" />
+    <p class="adlib-form-field">
+      <%= f.label :name, 'Page Name' %><br/>
+      <%= f.text_field :name %>
+    </p>
+    <p class="adlib-form-field">
+      <%= f.label :slug, 'URL Slug' %><br/>
+      <%= f.text_field :slug %>
+    </p>
+    <p class="adlib-form-field">
+      <%= f.label :layout %><br/>
+      <%= f.select :layout, params[:layouts].split(',') %>
+    </p>
+    <p class="adlib-form-buttons">
+      <%= submit_tag 'Create Page' %> | <%= link_to 'Cancel', :back %>
+    </p>
+  <% end -%>
+</div>

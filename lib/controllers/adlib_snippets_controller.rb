@@ -1,5 +1,4 @@
-class AdlibSnippetsController < ActionController::Base
-
+class AdlibSnippetsController <  ActionController::Base
   append_view_path File.expand_path(File.dirname(__FILE__) + '/../views') 
   append_before_filter :logged_in?, :load_current_page
 
@@ -11,10 +10,15 @@ class AdlibSnippetsController < ActionController::Base
   def create
     new
     @adlib_snippet.attributes = params[:adlib_snippet]
-    if @adlib_snippet.save
-      redirect_to @adlib_page.full_slug
-    else
-      render :template => 'adlib_snippets/new'
+
+    respond_to do |format|
+      if @adlib_snippet.save
+        format.html { redirect_to @adlib_page.full_slug }
+        format.xml  { render :inline => '<success />', :status => :ok }
+      else
+        format.html { render :template => 'adlib_snippets/new' }
+        format.xml  { render :xml => @adlib_snippet.errors, :status => :unprocessable_entity }
+      end
     end
   end
   
@@ -25,10 +29,15 @@ class AdlibSnippetsController < ActionController::Base
   def update
     edit
     @adlib_snippet.attributes = params[:adlib_snippet]
-    if @adlib_snippet.save
-      redirect_to @adlib_page.full_slug
-    else
-      render :template => 'adlib_snippets/edit'
+
+    respond_to do |format|
+      if @adlib_snippet.save
+        format.html { redirect_to @adlib_page.full_slug }
+        format.xml  { render :inline => '<success />', :status => :ok }
+      else
+        format.html { render :template => 'adlib_snippets/edit' }
+        format.xml  { render :xml => @adlib_snippet.errors, :status => :unprocessable_entity }
+      end
     end
   end
 

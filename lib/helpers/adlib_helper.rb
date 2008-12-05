@@ -7,6 +7,26 @@ module AdlibHelper
   def adlib_user
     @adlib_user ||= AdlibUser.find_by_id(session[:adlib_user_id])
   end
+
+  def adlib_page_toolbar
+    return '' unless adlib_logged_in?
+    content = link_to 'EDIT PAGE SETTINGS', "#{edit_adlib_page_path(@adlib_page)}", :id => 'adlib_link_to_page_edit', :class => 'adlib-modal-dialog'
+    content_tag :div, content, :id => 'adlib-page-toolbar'
+  end
+
+  def adlib_powered_by
+    adelphus_link = link_to 'Adelphus', 'http://www.adelphus.com/', :target => '_blank'
+
+    if adlib_logged_in?
+      adlib_link = ' | '
+      adlib_link += link_to 'Logout', '/adlib/session', :id => 'adlib_link_to_session_destroy', :method => :delete
+    else
+      adlib_link = link_to 'Adlib', '/adlib/session/new', :id => 'adlib_link_to_session_new', :class => 'adlib-modal-dialog'
+    end
+    
+    content = "Powered by #{adelphus_link} #{adlib_link}"
+    content_tag :div, content, :id => 'adlib-powered-by'
+  end
   
   def adlib_link_to(page = @adlib_page)
     options = {}
@@ -57,7 +77,8 @@ module AdlibHelper
     if adlib_logged_in?
       snippet_edit_wrapper(content, richtext, page, snippet, slot)
     else
-      content_tag :div, content, :class => 'adlib-noedit'
+      encoding = richtext ? 'richtext' : 'plaintext'
+      content_tag :div, content, :class => "adlib-#{encoding}-noedit"
     end
   end
   
@@ -74,7 +95,7 @@ module AdlibHelper
     if adlib_logged_in?
       image_edit_wrapper(content, image_id, path_args, slot)
     else
-      content_tag :div, content, :class => 'adlib-noedit'
+      content_tag :a, content, :class => 'adlib-image-noedit'
     end
   end
 
@@ -129,7 +150,7 @@ module AdlibHelper
     end
     
     def image_edit_wrapper(content, image_id, path_args, slot)
-      content = content_tag(:span, 'EDIT', :class => 'adlib-edit') + content
+      content = content_tag(:span, 'EDIT', :class => 'adlib-image-edit') + content
       if image_id
         href = edit_adlib_page_image_path(*path_args)
       else
@@ -148,7 +169,7 @@ module AdlibHelper
         href = new_adlib_page_snippet_path(page.id, :slot => slot, :encoding => encoding)
       end
       html_id = "snippet_#{page.id}_#{slot}"
-      content = link_to('EDIT', href, :id => "#{html_id}_edit", :class => 'adlib-edit') + content
+      content = link_to('EDIT', href, :id => "#{html_id}_edit", :class => "adlib-#{encoding}-edit") + content
       content = content_tag(:div, content, :id => html_id, :class => "adlib-#{encoding}")
     end
 

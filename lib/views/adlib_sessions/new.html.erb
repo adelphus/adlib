@@ -1,4 +1,4 @@
-<div id="adlib-session-new">
+<div id="adlib-session-new" title="Adlib Login" width="400" height="320">
   <% unless @adlib_user.errors.empty? -%>
     <p class="error"><%= @adlib_user.errors.on_base %></p>
   <% end -%>
@@ -13,7 +13,7 @@
       <%= f.password_field :password %>
     </p>
     <p class="adlib-form-buttons">
-      <%= submit_tag 'Log in' %>
+      <%= submit_tag 'Log In' %>
     </p>
   <% end -%>
 </div>

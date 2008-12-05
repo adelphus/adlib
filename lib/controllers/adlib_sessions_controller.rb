@@ -1,5 +1,4 @@
 class AdlibSessionsController < ActionController::Base
-   
   append_view_path File.expand_path(File.dirname(__FILE__) + '/../views') 
 
   def new
@@ -15,11 +14,15 @@ class AdlibSessionsController < ActionController::Base
     @adlib_user.username = params[:adlib_user][:username]
     @adlib_user = AdlibUser.find_by_username(@adlib_user.username) || @adlib_user
 
-    if @adlib_user.authenticated?(params[:adlib_user][:password])
-      session[:adlib_user_id] = @adlib_user.id
-      redirect_to_default
-    else
-      render :action => 'new'
+    respond_to do |format|
+      if @adlib_user.authenticated?(params[:adlib_user][:password])
+        session[:adlib_user_id] = @adlib_user.id
+        format.html { redirect_to_default }
+        format.xml  { render :inline => '<success />', :status => :ok }
+      else
+        format.html { render :action => 'new' }
+        format.xml  { render :xml => @adlib_user.errors, :status => :unprocessable_entity }
+      end
     end
   end
 

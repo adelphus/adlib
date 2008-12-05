@@ -1,1 +1,1 @@
-require 'lib/adlib'
+require 'adlib'
