@@ -6,6 +6,7 @@ ActionController::Routing::Routes.draw do |map|
     pages.resources :snippets, :controller => 'adlib_snippets'
     pages.resources :images, :controller => 'adlib_images'
   end
+  map.connect 'adlib/*path', :controller => 'adlib', :action => 'get'
   
   # Adlib dynamic page route
   map.connect '*path', :controller => 'adlib_pages', :action => 'show'  
