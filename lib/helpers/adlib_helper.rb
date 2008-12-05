@@ -8,6 +8,14 @@ module AdlibHelper
     @adlib_user ||= AdlibUser.find_by_id(session[:adlib_user_id])
   end
 
+  def adlib_include_tags
+    stylesheets = %w{ jquery-ui-themeroller rte adlib-0.1.0 }
+    javascripts = %w{ jquery-1.2.6.min jquery-ui-personalized-1.6rc2.min jquery.rte adlib-0.1.0 }
+
+    stylesheets.collect { |name| "<link href='/adlib/stylesheets/#{name}.css' rel='stylesheet' type='text/css'>" }.join +
+    javascripts.collect { |name| "<script language='javascript' src='/adlib/javascripts/#{name}.js'></script>" }.join
+  end
+
   def adlib_page_toolbar
     return '' unless adlib_logged_in?
     content = link_to 'EDIT PAGE SETTINGS', "#{edit_adlib_page_path(@adlib_page)}", :id => 'adlib_link_to_page_edit', :class => 'adlib-modal-dialog'

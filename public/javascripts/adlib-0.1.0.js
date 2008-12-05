@@ -70,7 +70,7 @@ $(function() {
         height: content.attr('height')
       }).dialog('open');
       $(this).css('display', 'block');
-      $('p.adlib-form-textarea textarea').rte('/stylesheets/rte.css', '/stylesheets/rte-images/');
+      $('p.adlib-form-textarea textarea').rte('/adlib/stylesheets/rte.css', '/adlib/stylesheets/rte-images/');
     });
     return false;
   });
