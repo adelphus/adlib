@@ -10,8 +10,8 @@ module AdlibHelperSpecHelper
   end
 
   def setup_ancestor_image
-    @ancestor = flexmock(:model, AdlibPage)
-    @parent = flexmock(:model, AdlibPage)
+    @ancestor = flexmock(:model, AdlibPage, "ancestor")
+    @parent = flexmock(:model, AdlibPage, "parent")
     @adlib_page.should_receive(:parent).and_return(@parent)
     @parent.should_receive(:parent).and_return(@ancestor)
     @image = flexmock(:model, AdlibImage)
@@ -32,7 +32,7 @@ describe AdlibHelper, "adlib_image" do
   include AdlibHelperSpecHelper
 
   before(:each) do
-    @adlib_page = flexmock(:model, AdlibPage)
+    @adlib_page = flexmock(:model, AdlibPage, "page")
   end
 
   it "should render an img tag for the image content" do
@@ -48,7 +48,7 @@ describe AdlibHelper, "adlib_image" do
 
   it "should render an img tag for the ancestor image content" do
     setup_ancestor_image
-
+    
     src_re = /\s*?src="\/adlib\/pages\/#{@ancestor.id}\/images\/#{@image.id}"\s*?/
     alt_re = /\s*?alt="Absent"\s*?/
     img_re = /<img (#{src_re}|#{alt_re}){2} \/>/

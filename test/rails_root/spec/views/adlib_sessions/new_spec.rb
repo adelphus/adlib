@@ -16,7 +16,7 @@ describe '/adlib/sessions/new' do
     
     response.should have_tag('input[name=?]', 'adlib_user[username]')
     response.should have_tag('input[name=?]', 'adlib_user[password]')
-    response.should have_tag('input[value=?]', 'Log in')
+    response.should have_tag('input[value=?]', 'Log In')
   end
 
   it "should display an error message after an unsuccessful login attempt" do

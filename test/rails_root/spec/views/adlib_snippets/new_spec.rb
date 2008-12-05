@@ -6,7 +6,7 @@ describe '/adlib/snippets/new' do
     @controller.view_paths = File.expand_path(File.dirname(__FILE__) + '/../../../../../lib/views')
     @snippet = flexmock(:model, AdlibSnippet)
     @snippet.errors.should_receive(:empty?).and_return(true).by_default
-    @snippet.should_receive(:slot).and_return(nil).by_default
+    @snippet.should_receive(:slot).and_return('body').by_default
     @snippet.should_receive(:content).and_return(nil).by_default
     assigns[:adlib_snippet] = @snippet
   end
