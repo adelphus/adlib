@@ -54,5 +54,12 @@ class AdlibPagesController < ActionController::Base
       end
     end
   end
+
+  def destroy
+    @adlib_page = AdlibPage.find(params[:id].to_i)
+    @adlib_page.destroy
+
+    redirect_to :back
+  end
   
 end
