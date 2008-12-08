@@ -6,7 +6,7 @@
   <% form_for :adlib_snippet, :url => adlib_page_snippets_path(@adlib_page) do |f| -%>
     <%= f.hidden_field :slot %>
     <p class="adlib-form-textarea">
-      <%= f.text_area :content %>
+      <%= f.text_area :content, :id => "adlib_snippet_content_#{Time.now.to_s.gsub(/\D+/, '')}" %>
     </p>
     <p class="adlib-form-buttons">
       <%= submit_tag 'Save Changes' %> | <%= link_to 'Cancel', :back %>

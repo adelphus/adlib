@@ -9,8 +9,8 @@ module AdlibHelper
   end
 
   def adlib_include_tags
-    stylesheets = %w{ jquery-ui-themeroller rte adlib-0.1.0 }
-    javascripts = %w{ jquery-1.2.6.min jquery-ui-personalized-1.6rc2.min jquery.rte adlib-0.1.0 }
+    stylesheets = %w{ jquery-ui-themeroller adlib-0.1.0 }
+    javascripts = %w{ tiny_mce/tiny_mce jquery-1.2.6.min jquery-ui-personalized-1.6rc2.min adlib-0.1.0 }
 
     stylesheets.collect { |name| "<link href='/adlib/stylesheets/#{name}.css' rel='stylesheet' type='text/css'>" }.join +
     javascripts.collect { |name| "<script language='javascript' src='/adlib/javascripts/#{name}.js'></script>" }.join
