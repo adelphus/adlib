@@ -61,5 +61,11 @@ class AdlibPagesController < ActionController::Base
 
     redirect_to :back
   end
+
+  def sort
+    order = params[:page]
+    AdlibPage.order(order)
+    render :text => order.inspect    
+  end
   
 end

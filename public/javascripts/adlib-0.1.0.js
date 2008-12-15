@@ -34,6 +34,9 @@ tinyMCE.init({
 
 
 $(function() {
+  $('ul.adlib-page-sortable').sortable({ axis: 'y', handle: '.handle', update: function() {
+    $.post('/adlib/pages/sort', '_method=put&'+$(this).sortable('serialize'));
+  }});
   $('div.adlib-richtext').hover(function() {
     $(this).addClass('iehover');
   }, function() {

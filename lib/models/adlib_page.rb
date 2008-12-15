@@ -30,6 +30,13 @@ class AdlibPage < ActiveRecord::Base
       end
       page
     end
+    
+    def order(ids)
+      return unless ids.length > 1
+      ids.inject do |previous, id|
+        AdlibPage.find(id).move_to_right_of previous
+      end
+    end
   end
   
   private

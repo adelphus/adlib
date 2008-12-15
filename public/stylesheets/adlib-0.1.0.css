@@ -46,14 +46,20 @@ div:hover.adlib-richtext a.adlib-richtext-edit,
 div.iehover a.adlib-richtext-edit {
   display: block;  
 }
+p.adlib-form-textarea {
+  margin: 0px;
+}
 p.adlib-form-textarea textarea {
   width: 630px;
   height: 330px;
 }
-div.rte-toolbar {
-  margin-top: -1em;
+ul.adlib-page-sortable {
+  list-style-type: none;  
 }
-iframe {
-  border: 2px solid #CCCCCC;
-  padding: 4px;
+ul.adlib-page-sortable li .handle {
+  display: inline;
+  cursor: move;
+  vertical-align: middle;
+  margin-right: 4px;
 }
+
