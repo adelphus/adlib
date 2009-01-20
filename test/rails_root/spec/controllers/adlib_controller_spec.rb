@@ -1,11 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe AdlibController do
-
-  before(:each) do
-    @page = flexmock(:model, AdlibPage)
-    @page.should_receive(:layout).and_return('inside')
-  end
   
   describe "(routing)" do
 
