@@ -1,7 +1,8 @@
 require 'RMagick'
 
-require 'adlib/migrator'
 require 'adlib/routes'
+require 'adlib/migrator'
+Adlib::Migrator.migrate(ENV['VERSION'], false)
 
 require 'controllers/adlib_controller'
 require 'controllers/adlib_sessions_controller'
@@ -15,7 +16,4 @@ require 'models/adlib_snippet'
 require 'models/adlib_image'
 
 require 'helpers/adlib_helper'
-
-Adlib::Migrator.migrate(ENV['VERSION'], false)
-
 include AdlibHelper

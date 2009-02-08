@@ -1,9 +1,6 @@
-require 'vendor/plugins/betternestedset/lib/better_nested_set'
-require 'vendor/plugins/betternestedset/lib/better_nested_set_helper'
-
-ActiveRecord::Base.class_eval do
-  include SymetrieCom::Acts::NestedSet
-end
-ActionView::Base.send :include, SymetrieCom::Acts::BetterNestedSetHelper
+bns_path = File.dirname(File.expand_path(__FILE__)) + "/vendor/plugins/betternestedset"
+$LOAD_PATH <<  "#{bns_path}/lib"
+init_path = "#{bns_path}/init.rb"
+silence_warnings { eval(IO.read(init_path), binding, init_path) }
 
 require 'adlib'
